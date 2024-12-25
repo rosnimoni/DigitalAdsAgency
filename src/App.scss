@@ -789,6 +789,14 @@ $xs: '(max-width: 575px)';
   // 
   // Offcanvas CSS
   // 
+  .offcanvas__area{
+    opacity: 0;
+    visibility: hidden;
+  }
+  .offcanvas__open{
+    opacity: 1;
+    visibility: visible;
+  }
   .offcanvas {
     &__close {
       right: unset;
@@ -4194,7 +4202,7 @@ img {
   bottom: 20px;
   z-index: 9991;
   border-radius: 100px;
-  color: var(--white);
+  //color: var(--white);
   background: var(--white);
   transition: all 0.3s;
   display: none;
@@ -6633,7 +6641,7 @@ img {
 
       >a {
         display: block;
-        font-weight: 400;
+        font-weight: 600;
         font-size: 16px;
         text-decoration: none!important;
         line-height: 16px;
@@ -6791,6 +6799,7 @@ img {
           display: block;
           margin-bottom: 0;
           text-transform: capitalize;
+          text-decoration: none;
 
           @media #{$xl} {
             padding: 6px 12px;
@@ -8572,18 +8581,18 @@ img {
     }
 
     &-3 {
-      padding-top: 190px;
+      padding-top: 140px;
       padding-bottom: 125px;
       position: relative;
       overflow: hidden;
 
       @media #{$xxl} {
-        padding-top: 160px;
+        padding-top: 140px;
         padding-bottom: 110px;
       }
 
       @media #{$xl} {
-        padding-top: 140px;
+        padding-top: 140px!important;
         padding-bottom: 110px;
       }
 
@@ -12713,8 +12722,8 @@ ul{
     }
 
     &-3 {
-      text-align: right;
-      padding-top: 90px;
+    display: block;
+    margin: auto;
 
       @media #{$xl} {
         padding-top: 0;
@@ -12745,14 +12754,23 @@ ul{
 
       a {
         font-weight: 400;
-        font-size: 180px;
+        font-size: 90px;
         line-height: 1;
         text-align: center;
         text-transform: uppercase;
         color: var(--white);
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        translate: none;
+        rotate: none;
+        scale: none;
+        transform-origin: 50% 100%;
+        transform: translate(0px, 0px);
+        color: rgb(244, 214, 105);
 
         @media #{$xxl} {
-          font-size: 140px;
+          font-size: 90px;
         }
 
         @media #{$xl} {

@@ -2,6 +2,9 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import about1 from "../assets/imgs/about/1.jpg"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+
 const About = () => {
   return (
     <>
@@ -27,8 +30,9 @@ const About = () => {
                       insights with design, technological data to produce brand experiences that customers love our
                       services.</p>
                     <div className="btn_wrapper">
-                      <a className="wc-btn-light btn-hover btn-item" href="about.html"><span></span> Explore Us <i
-                          className="fa-solid fa-arrow-right"></i></a>
+                      <a className="wc-btn-light btn-hover btn-item" href="about.html"><span></span> Explore Us
+                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                      </a>
                     </div>
                   </div>
                 </div>

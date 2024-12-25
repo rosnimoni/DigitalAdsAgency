@@ -1,14 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import logo_black from "../assets/imgs/logo-black.png";
 import site_logo_white_2 from "../assets/imgs/site-logo-white-2.png";
 import menu_black from "../assets/imgs/icon/menu-black.png"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUp,faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import OffCanvasArea from "./OffCanvasArea";
+
 
 const Header = () => {
+  const [openCanvass, SetOpenCanvass] = useState(0);
+
   let device_width = window.innerWidth;
+
+ 
+
   useEffect(() => {
-  // 03. Scroll Top
+
   let scroll_top = document.getElementById("scroll_top");
   if (scroll_top) {
       window.onscroll = function () {
@@ -122,7 +131,7 @@ const Header = () => {
   return (
     <>
     {/* Go Top Button  */}
-  <button id="scroll_top" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
+  <button id="scroll_top" class="scroll-top"><FontAwesomeIcon icon={faArrowUp} /></button>
 
       <header className="header__area-3">
         <div className="header__inner-3">
@@ -597,12 +606,12 @@ const Header = () => {
           </div>
           <div className="header__nav-icon-3">
             <button className="search-icon" id="search_icon">
-              <i className="fa-solid fa-magnifying-glass"></i>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
             <button className="search-icon" id="search_close">
               <i className="fa-solid fa-xmark"></i>
             </button>
-            <button id="open_offcanvas">
+            <button onClick={()=>SetOpenCanvass(1)} id="open_offcanvas">
               <img src={menu_black} alt="Menubar Icon" />
             </button>
           </div>
@@ -614,6 +623,10 @@ const Header = () => {
           <input type="text" name="s" id="s" placeholder="Search.." />
         </form>
       </div>
+
+      {/* <!-- Offcanvas area start --> */}
+      <OffCanvasArea/>
+
     </>
   );
 };

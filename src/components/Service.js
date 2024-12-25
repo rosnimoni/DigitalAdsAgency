@@ -1,6 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'font-awesome/css/font-awesome.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSquareUpRight } from '@fortawesome/free-solid-svg-icons'
 
 const items = [
     {
@@ -87,7 +88,8 @@ const Service = () => {
                     <div className="service__btn-3">
                       <div className="btn_wrapper">
                         <a href="service-details.html" className="wc-btn-black btn-hover btn-item"><span></span> Details
-                          <i className="fa-solid fa-arrow-right"></i></a>
+                        <FontAwesomeIcon icon={faSquareUpRight} />
+                          </a>
                       </div>
                     </div>
 
