@@ -3,33 +3,28 @@ import "bootstrap/dist/css/bootstrap.css";
 import arrow_down_sm from "../assets/imgs/icon/arrow-down-sm.png";
 import hero3_img from "../assets/imgs/hero/1.jpg";
 import hero_3 from "../assets/video/hero-3.mp4";
-import { gsap, ScrollTrigger, DrawSVGPlugin } from "gsap-trial/all";
-import SplitText from "gsap-trial/SplitText";
+import gsap from "gsap"
 
-gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin , SplitText); 
 
 const Header = () => {
 
-  gsap.registerPlugin(SplitText);
+  // gsap.registerPlugin(SplitText);
   
-  useEffect(() => {
-    let tHero = gsap.timeline();
+  // useEffect(() => {
+  //   let tHero = gsap.timeline();
 
-    let heading_title = new SplitText(".sec-title", { type: "chars" });
-    let heading_char = heading_title.chars;
+  //   let heading_title = new SplitText(".sec-title", { type: "chars" });
+  //   let heading_char = heading_title.chars;
 
-    tHero.from(heading_char, {
-      rotate: 2,
-      ease: "back.out",
-      opacity: 0,
-      duration: 3,
-      stagger: 0.1,
-    });
-
-
-
+  //   tHero.from(heading_char, {
+  //     rotate: 2,
+  //     ease: "back.out",
+  //     opacity: 0,
+  //     duration: 3,
+  //     stagger: 0.1,
+  //   });
     
-  }, []);
+  // }, []);
 
   return (
     <>
